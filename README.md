@@ -23,4 +23,10 @@ Le contexte général de ce(s) sujet(s) est l’IA intégrant des aspects de sé
 
 [Ren et al, 2020] Kui Ren, Tianhang Zheng, Zhan Qin, Xue Liu, Adversarial Attacks and Defenses in Deep Learning, Engineering, Volume 6, Issue 3, 2020, Pages 346-360,
 
+https://medium.com/meetech/adversarial-learning-benchmark-evaluating-attack-and-defence-strategies-48085ab3ac3
+https://github.com/cedricgoubard/benchmark-adversarial-attacks
+
+
+https://towardsdatascience.com/adversarial-attacks-in-machine-learning-and-how-to-defend-against-them-a2beed95f49c
+
 Voir aussi les travaux de Florian Tramer : https://floriantramer.com/
