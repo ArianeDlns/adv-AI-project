@@ -35,7 +35,16 @@ One of the most challenging issue that comes with facial recognition tools is th
 
 ## Fawkes & Data Poisoning
 
+An example of such a protection tool is Fawkes, a project led by 2 PhD students at Sand Lab. It was primarily designed to help citizens protect their online privacy as some facial recognition services started downloading tons of photos of people from the internet without them being aware. 
+To put a long story short, Fawkes protects your privacy by “poisoning” facial recognition models so that when they try to recognize you using a “clear” picture -i.e. a photo that hasn’t been modified by Fawkes- they won’t be able to find similarities with the “cloaked” pictures (the ones modified).
+More precisely, Fawkes follows the next steps :
+1. It gets a set of photos from the user that wants protection as input
+2. It accesses an open set of labeled pictures and select the most dissimilar class within this set as a target
+3. For each photos in the user set, it selects a picture in the target set and computes a cloak, i.e. pixel-sized modifications limited by a similarity factor so that the cloaked photo still looks like the original one
+4. The user can now post the new photos online, and has to ensure that no clear photos are available elsewhere on the web
+5. Facial recognition models will then learn from this modified photos that are mathematically different even when looking similar and won’t be able to recognize
 
+<p align="center"> <img src="https://github.com/ArianeDlns/adv-AI-project/blob/main/img/Fawkes.png" width="400" alt="Fawkes"/> 
 
 ## Tests and results
 
