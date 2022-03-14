@@ -8,6 +8,8 @@ Le contexte général de ce(s) sujet(s) est l’IA intégrant des aspects de sé
 - la réalisation d’un état des lieux intégrant un questionnement entre les solutions développées dans la Recherche et la réalité de la mise en place d’attaques et de mécanismes de défense en conditions réelles et sur des systèmes réels.  
 - L’étude d’une approche en particulier et de ses avancées comme par exemple les attaques adversaires et les mécanismes de défense associés.
 
+> Choix: [Overview of adversarial attacks on facial recognition](https://github.com/ArianeDlns/adv-AI-project/blob/main/medium_article.md)
+
 ## :runner: Running the code
 
 ## :package: Organisation of the project
@@ -26,7 +28,10 @@ Le contexte général de ce(s) sujet(s) est l’IA intégrant des aspects de sé
 https://medium.com/meetech/adversarial-learning-benchmark-evaluating-attack-and-defence-strategies-48085ab3ac3
 https://github.com/cedricgoubard/benchmark-adversarial-attacks
 
-
 https://towardsdatascience.com/adversarial-attacks-in-machine-learning-and-how-to-defend-against-them-a2beed95f49c
 
 Voir aussi les travaux de Florian Tramer : https://floriantramer.com/
+
+https://people.cs.uchicago.edu/%7Eravenben/publications/abstracts/fawkes-usenix20.html
+
+https://github.com/ftramer/FaceCure
