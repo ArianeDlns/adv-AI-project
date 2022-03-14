@@ -4,13 +4,8 @@
 
 ## Introduction : 
 
-<<<<<<< HEAD
 As artificial intelligence (AI) based tools start to get democratized amongst a wide range of users, their safety and security aspects are becoming key factors for their designs.Indeed, attacks on poorly built AI technologies might cause unintended or harmful behaviors and therefore be detrimental to users' experiences.
 Today, more and more papers discuss the different types of attacks one can use to disturb an AI agent's expected behavior.In 2016, Amodei et al [1] presented a list of five practical research problems related to AI safety with ReinforcementLearning (RL) agents, categorizing them in five different categories :
-=======
-As artificial intelligence (AI) based tools start to get democratized amongst a wide range of users, their safety and security aspects are becoming key factors for their designs.Indeed, attacks on poorly built AI technologies might  cause unintended or harmful behaviors and therefore be detrimental to the users' experiences.
-Today, more and more papers discuss the different types of attacks one can use to disturb an AI agent's expected behavior.In 2016, Amodei et al [1] presented a list of five practical research problems related to AI safety with ReinforcementLearning (RL) agents, categorizing them in five different categories:
->>>>>>> 1547a03484fa31f11140f69714131bf38bdedb09
 
 - **Negative Side Effects** : The agent must not disturb its environment in a destructive manner.
 - **Reward Hacking** : The reward function must not allow the agent to find “trick actions” that allow it to gain reward for undesirable actions.
