@@ -52,7 +52,9 @@ More precisely, Fawkes follows the next steps :
 
 ## Attacks limits
 
+Data poisoning approach suffers from some limitations, both in performances and usability. First and foremost, the data poisoning focus, as the name suggests, on the poisoning the dataset. Most studies suppose only cloaked photos are available on social media, which is highly unlikely. A balanced mix of cloaked and uncloaked images is more realistic, and is still effective as Fawkes reports 80% effectiveness is that situation. However careful examination of the dataset using a clustering approach with 2-means on each class/person would still be able to spot the cloaked and uncloaked images to eliminate the poisoned data, as their centroid in the feature space is slightly different.
 
+The second issue beside, the existence of an uncloaked dataset, is the visual deformation, which remains highly visible on big pictures. In that regard, LowKey tweaks textures, an approach which is very noticeable even to unaware eyes, especially on the skin. Fawkes is more subtle and slightly displace features, or add spots. However the more subtle an approach, the less effective it is, as LowKey reports better results as Fawkes.
 
 
 ## References 
