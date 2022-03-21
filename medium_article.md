@@ -1,10 +1,10 @@
-# Sécurité et IA
+# Security & AI 
 
 # Overview of adversarial attacks on facial recognition
 
 ## Introduction : 
 
-As artificial intelligence (AI) based tools start to get democratized amongst a wide range of users, their safety and security aspects are becoming key factors for their designs.Indeed, attacks on poorly built AI technologies might  cause unintended or harmful behaviors and therefore be detrimental to users' experiences.
+As artificial intelligence (AI) based tools start to get democratized amongst a wide range of users, their safety and security aspects are becoming key factors for their designs. Indeed, attacks on poorly built AI technologies might cause unintended or harmful behaviors and therefore be detrimental to users' experiences.
 Today, more and more papers discuss the different types of attacks one can use to disturb an AI agent's expected behavior.In 2016, Amodei et al [1] presented a list of five practical research problems related to AI safety with ReinforcementLearning (RL) agents, categorizing them in five different categories :
 
 - **Negative Side Effects** : The agent must not disturb its environment in a destructive manner.
@@ -35,7 +35,18 @@ One of the most challenging issue that comes with facial recognition tools is th
 
 ## Fawkes & Data Poisoning
 
+An example of such a protection tool is Fawkes, a project led by 2 PhD students at Sand Lab. It was primarily designed to help citizens protect their online privacy as some facial recognition services started downloading tons of photos of people from the internet without them being aware. 
+To put a long story short, Fawkes protects your privacy by “poisoning” facial recognition models so that when they try to recognize you using a “clear” picture -i.e. a photo that hasn’t been modified by Fawkes- they won’t be able to find similarities with the “cloaked” pictures (the ones modified).
+More precisely, Fawkes follows the next steps :
+1. It gets a set of photos from the user that wants protection as input
+2. It accesses an open set of labeled pictures and select the most dissimilar class within this set as a target
+3. For each photos in the user set, it selects a picture in the target set and computes a cloak, i.e. pixel-sized modifications limited by a similarity factor so that the cloaked photo still looks like the original one
+4. The user can now post the new photos online, and has to ensure that no clear photos are available elsewhere on the web
+5. Facial recognition models will then learn from this modified photos that are mathematically different even when looking similar and won’t be able to recognize
 
+This method is called “data poisoning” as it doesn’t affect the model itself but hampers its learning phase by providing altered training input. But this will only work if the model has not already been trained with clean pictures and if no or very few uncloaked photos are available online.
+
+<p align="center"> <img src="https://github.com/ArianeDlns/adv-AI-project/blob/main/img/Fawkes.png" width="700" alt="Fawkes"/> 
 
 ## Tests and results
 
@@ -56,3 +67,4 @@ In Proceedings of USENIX Security Symposium 2020.
 
 [3] : Rubel Biswas, Pablo Blanco-Medina (Aug. 2021). State of the Art : Face Recognition. ArXiv abs/2108.11821.
 
+[4] : Evani Radiya-Dixi, Florian Tramèr (2021). Data Poisoning Won’t Save You From Facial Recognition. ArXiv:2106.14851.
