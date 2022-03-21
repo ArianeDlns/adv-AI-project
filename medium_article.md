@@ -56,6 +56,15 @@ Data poisoning approach suffers from some limitations, both in performances and 
 
 The second issue beside the existence of an uncloaked dataset, is the visual deformation, which remains highly visible on big pictures. In that regard, LowKey tweaks textures, an approach which is very noticeable even to unaware eyes, especially on the skin. Fawkes is more subtle and slightly displace features, or add spots. However the more subtle an approach, the less effective it is, as LowKey reports better results as Fawkes.
 
+https://render.githubusercontent.com/render/math?math=max_\delta{dist(\Phi(x), \Phi(x \bigoplus \delta(x, x_T))), \text{s.t.} |\delta(x,x_T) < \pho}
+
+Cant be too distant or anomaly detection
+
+Dense features space Models tracking a lot of class (fawkes 6 min) as we need an image more similar than the cloaked image in etheir features space.
+
+<p align="center"> <img src="https://github.com/ArianeDlns/adv-AI-project/blob/main/img/features-spaces.png" width="400" alt="Features space"/> 
+
+
 
 ## References 
 
