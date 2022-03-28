@@ -35,3 +35,5 @@ Voir aussi les travaux de Florian Tramer : https://floriantramer.com/
 https://people.cs.uchicago.edu/%7Eravenben/publications/abstracts/fawkes-usenix20.html
 
 https://github.com/ftramer/FaceCure
+
+https://medium.com/@shikharsrivastava_14544/face-recognition-using-transfer-learning-with-vgg16-3caeca4a916e

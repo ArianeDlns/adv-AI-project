@@ -36,7 +36,7 @@ Even though they are very efficient, Face Recognition models are not invulnerabl
 - **Targeted attacks**,  which seek to trick the FR model into recognizing a specific identity. They are also called impersonation attacks.
 - **Non-targeted attacks**, whose goal is that the FR model fails to recognize the treated person, regardless of the model's output. They are also called Dodging attacks.
 
-Most of those attacks are **adversarial attacks**. They consist in modifying an original image in a way that is almost imperceptible to the human eye in order to fool a classifier into predicting the wrong class. They are particularly interesting because they are targeting Deep Neural Networks (DNNs) and Convolutional Neural Networks (CNNs) models. One of the difficulties of these attacks is that the targeted models are most of the time "black box" models, in which the architecture, the parameters or the training procedure are unknown. The attacker can however interact with the model by transferring adversarial examples.
+Most of those attacks are **adversarial attacks** [3]. They consist in modifying an original image in a way that is almost imperceptible to the human eye in order to fool a classifier into predicting the wrong class. They are particularly interesting because they are targeting Deep Neural Networks (DNNs) and Convolutional Neural Networks (CNNs) models. One of the difficulties of these attacks is that the targeted models are most of the time "black box" models, in which the architecture, the parameters or the training procedure are unknown. The attacker can however interact with the model by transferring adversarial examples.
 
 The different attacks can be separated into 2 types:
 -  **Physical attacks**, modifying the physical appearance of a face before taking the picture
@@ -72,7 +72,7 @@ More precisely, Fawkes follows the next steps :
 4. The user can now post the new photos online, and has to ensure that no clear photos are available elsewhere on the web
 5. Facial recognition models will then learn from this modified photos that are mathematically different even when looking similar and won’t be able to recognize
 
-<p align="center"> <img src="https://github.com/ArianeDlns/adv-AI-project/blob/main/img/Fawkes_references.png" width="700" alt="Fawkes working"/> 
+<p align="center"> <img src="https://github.com/ArianeDlns/adv-AI-project/blob/main/img/Fawkes_reference.png" width="700" alt="Fawkes working"/> 
 
 This method is called “data poisoning” as it doesn’t affect the model itself but hampers its learning phase by providing altered training input. But this will only work if the model has not already been trained with clean pictures and if no or very few uncloaked photos are available online.
 
@@ -89,12 +89,10 @@ This method is called “data poisoning” as it doesn’t affect the model itse
 
 [1] [Amodei et al, 2016] Amodei, D., Olah, C., Steinhardt, J., Christiano, P.F., Schulman, J., & Mané, D. (2016). Concrete Problems in AI Safety. ArXiv, abs/1606.06565.
 
-[2] Fawkes: Protecting Personal Privacy against Unauthorized Deep Learning Models.
-Shawn Shan, Emily Wenger, Jiayun Zhang, Huiying Li, Haitao Zheng, and Ben Y. Zhao.
-In Proceedings of USENIX Security Symposium 2020. 
+[2] [Shan et al, 2020] Shawn Shan, Emily Wenger, Jiayun Zhang, Huiying Li, Haitao Zheng, and Ben Y. Zhao. Fawkes: Protecting Personal Privacy against Unauthorized Deep Learning Models.In Proceedings of USENIX Security Symposium 2020. 
 
-[3] Rubel Biswas, Pablo Blanco-Medina (Aug. 2021). State of the Art : Face Recognition. ArXiv abs/2108.11821.
+[3] [Biswas et al, 2021] Rubel Biswas, Pablo Blanco-Medina (Aug. 2021). State of the Art : Face Recognition. ArXiv abs/2108.11821.
 
-[4] Evani Radiya-Dixi, Florian Tramèr (2021). Data Poisoning Won’t Save You From Facial Recognition. ArXiv:2106.14851.
+[4] [Tramer et al, 2021] Evani Radiya-Dixi, Florian Tramèr (2021). Data Poisoning Won’t Save You From Facial Recognition. ArXiv:2106.14851.
 
 [5] [Sharif et al, 2016] Sharif, Mahmood & Bhagavatula, Sruti & Bauer, Lujo & Reiter, Michael. (2016). Accessorize to a Crime: Real and Stealthy Attacks on State-of-the-Art Face Recognition. 1528-1540. 10.1145/2976749.2978392. 
