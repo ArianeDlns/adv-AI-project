@@ -72,7 +72,7 @@ More precisely, Fawkes follows the next steps :
 4. The user can now post the new photos online, and has to ensure that no clear photos are available elsewhere on the web
 5. Facial recognition models will then learn from this modified photos that are mathematically different even when looking similar and won’t be able to recognize
 
-![formula](https://render.githubusercontent.com/render/math?math=max_\delta{dist(\Phi(x), \Phi(x \bigoplus \delta(x, x_T))), \text{s.t.} | \delta(x, x_T) < \phi})
+<p align="center"> <img src="https://render.githubusercontent.com/render/math?math=max_\delta{dist(\Phi(x), \Phi(x \bigoplus \delta(x, x_T))), \text{s.t.} | \delta(x, x_T) < \phi}" width="500" alt="Fawkes distances"/> 
 
 <p align="center"> <img src="https://github.com/ArianeDlns/adv-AI-project/blob/main/img/Fawkes_reference.png" width="700" alt="Fawkes working"/> 
 
