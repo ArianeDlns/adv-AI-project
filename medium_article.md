@@ -1,6 +1,10 @@
-# Security & AI 
-
 # Overview of adversarial attacks on facial recognition
+[![Theme](https://badgen.net/badge/Theme/Security&AI/blue)](https://scholar.google.fr/scholar?q=security+and+AI&hl=fr&as_sdt=0&as_vis=1&oi=scholart) 
+[![Medium](https://badgen.net/badge/icon/medium?icon=medium&label)](https://medium.com/)
+[![VSCode](https://badgen.net/badge/icon/visualstudio?icon=visualstudio&label)](https://github.dev/ArianeDlns/adv-AI-project/tree/main)
+
+Authors: Valentin Bailly, Nathan Bruckmann, Ariane Dlns, Antoine Guillou-Keredan, Samuel Pujade, Lucas Sor    
+Date: March 28, 2022
 
 ## Introduction : 
 
@@ -79,7 +83,6 @@ This method is called “data poisoning” as it doesn’t affect the model itse
 <p align="center"> <img src="https://github.com/ArianeDlns/adv-AI-project/blob/main/img/Fawkes.png" width="700" alt="Fawkes"/> 
 
 ## Tests and results
-
 
 
 ## Attacks limits
