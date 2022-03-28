@@ -67,10 +67,12 @@ An example of such a protection tool is Fawkes, a project led by 2 PhD students 
 To put a long story short, Fawkes protects your privacy by “poisoning” facial recognition models so that when they try to recognize you using a “clear” picture -i.e. a photo that hasn’t been modified by Fawkes- they won’t be able to find similarities with the “cloaked” pictures (the ones modified).
 More precisely, Fawkes follows the next steps :
 1. It gets a set of photos from the user that wants protection as input
-2. It accesses an open set of labeled pictures and select the most dissimilar class within this set as a target
-3. For each photos in the user set, it selects a picture in the target set and computes a cloak, i.e. pixel-sized modifications limited by a similarity factor so that the cloaked photo still looks like the original one
+2. It accesses an open set of labeled pictures and select the most dissimilar class x_T  within this set as a target
+3. For each photos in the user set, it selects a picture in the target set and computes a cloak, i.e. pixel-sized modifications limited by a similarity factor φ so that the cloaked photo still looks like the original one
 4. The user can now post the new photos online, and has to ensure that no clear photos are available elsewhere on the web
 5. Facial recognition models will then learn from this modified photos that are mathematically different even when looking similar and won’t be able to recognize
+
+<p align="center"> <img src="https://render.githubusercontent.com/render/math?math=max_\delta{dist(\Phi(x), \Phi(x \bigoplus \delta(x, x_T))), \text{s.t.} | \delta(x, x_T) < \phi}" width="500" alt="Fawkes distances"/> 
 
 <p align="center"> <img src="https://github.com/ArianeDlns/adv-AI-project/blob/main/img/Fawkes_reference.png" width="700" alt="Fawkes working"/> 
 
@@ -84,6 +86,13 @@ This method is called “data poisoning” as it doesn’t affect the model itse
 
 ## Attacks limits
 
+Data poisoning approach suffers from some limitations, both in performances and usability. First and foremost, the data poisoning focus, as the name suggests, on the poisoning the dataset. Most studies suppose only cloaked photos are available on social media, which is highly unlikely. A balanced mix of cloaked and uncloaked images is more realistic, and is still effective as Fawkes reports 80% effectiveness is that situation. However careful examination of the dataset using a clustering approach with 2-means on each class/person would still be able to spot the cloaked and uncloaked images to eliminate the poisoned data, as their centroid in the feature space is slightly different. Anomaly detection is also able to detect cloaking if the dataset of cloaked and uncloaked image is unbalanced, or if the cloaking move the representation too far is the features space. Moreover, if face recognition system developers are aware of cloaking techniques, they are easily offset by including them in the training process. 
+
+The second issue beside the existence of an uncloaked dataset, is the visual deformation, which remains highly visible on big pictures. In that regard, LowKey tweaks textures, an approach which is very noticeable even to unaware eyes, especially on the skin. Fawkes is more subtle and slightly displace features, or add spots. However the more subtle an approach, the less effective it is, as LowKey reports better results as Fawkes.
+
+Finally, poisoning technics do not work well with 'toy examples' as they relies on a features space densely populated. If too few classes are used, the original image will still be the one closest to their cloaked version in the features space. The more class the better, and performances are lackluster with a number of labels in the single digit range. However this limitation is completely absent in any commercially available system, as they are designed to recognized thousands of faces.
+
+<p align="center"> <img src="https://github.com/ArianeDlns/adv-AI-project/blob/main/img/features-spaces.png" width="400" alt="Features space"/> 
 
 ## References 
 
