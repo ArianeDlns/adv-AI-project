@@ -18,6 +18,37 @@ Le contexte général de ce(s) sujet(s) est l’IA intégrant des aspects de sé
 
 ```bash 
 .
+├── README.md
+├── facial_recog_attack
+│   ├── facial_recognition_attack.ipynb
+│   ├── train_cloaked
+│   │   ├── ben_afflek
+│   │   ├── elton_john
+│   │   ├── jerry_seinfeld
+│   │   ├── madonna
+│   │   ├── mindy_kaling
+│   │   └── obama
+│   ├── train_uncloaked
+│   │   ├── ben_afflek
+│   │   ├── elton_john
+│   │   ├── jerry_seinfeld
+│   │   ├── madonna
+│   │   ├── mindy_kaling
+│   │   └── obama
+│   └── val
+│       ├── ben_afflek
+│       ├── elton_john
+│       ├── jerry_seinfeld
+│       ├── madonna
+│       ├── mindy_kaling
+│       └── obama
+├── img
+│   ├── Fawkes.png
+│   ├── Fawkes_reference.png
+│   └── features-space.png
+├── medium_article.md #Medium article 
+├── requirements.txt
+└── scrapping_face.ipynb
 ```
 
 ## References 

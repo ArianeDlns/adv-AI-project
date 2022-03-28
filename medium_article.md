@@ -140,7 +140,7 @@ The second issue beside the existence of an uncloaked dataset, is the visual def
 
 Finally, poisoning technics do not work well with 'toy examples' as they relies on a features space densely populated. If too few classes are used, the original image will still be the one closest to their cloaked version in the features space. The more class the better, and performances are lackluster with a number of labels in the single digit range. However this limitation is completely absent in any commercially available system, as they are designed to recognized thousands of faces.
 
-<p align="center"> <img src="https://github.com/ArianeDlns/adv-AI-project/blob/main/img/features-spaces.png" width="400" alt="Features space"/> 
+<p align="center"> <img src="https://github.com/ArianeDlns/adv-AI-project/blob/main/img/features-space.png" width="400" alt="Features space"/> 
 
 ## References 
 
