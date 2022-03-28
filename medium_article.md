@@ -31,7 +31,35 @@ One of the most challenging issue that comes with facial recognition tools is th
 
 ## Physical and Digital attacks
 
+Even though they are very efficient, Face Recognition models are not invulnerable and are sometimes facing attacks. These attacks can have a different goal and can be split in two categories :
 
+- **Targeted attacks**,  which seek to trick the FR model into recognizing a specific identity. They are also called impersonation attacks.
+- **Non-targeted attacks**, whose goal is that the FR model fails to recognize the treated person, regardless of the model's output. They are also called Dodging attacks.
+
+Most of those attacks are **adversarial attacks**. They consist in modifying an original image in a way that is almost imperceptible to the human eye in order to fool a classifier into predicting the wrong class. They are particularly interesting because they are targeting Deep Neural Networks (DNNs) and Convolutional Neural Networks (CNNs) models. One of the difficulties of these attacks is that the targeted models are most of the time "black box" models, in which the architecture, the parameters or the training procedure are unknown. The attacker can however interact with the model by transferring adversarial examples.
+
+The different attacks can be separated into 2 types:
+-  **Physical attacks**, modifying the physical appearance of a face before taking the picture
+- **Digital attacks**, making modifications to the captured image afterwards (mainly adversarial attacks) and which represent the majority of adversarial attacks
+
+### Physical attacks
+The majority of physical attacks are **presentation attacks** or **spoofing**. They include many techniques like wearing an accessory or imitating another person, with the aim of pretending to be another person (for example with a printed photo, a video, fake fingerprints, a 3D printed mask...). These attacks can be countered by Liveness Detection techniques that determine if the face is "alive" or real, for example by blink detection or interactive face detection.
+ 
+Another physical attack, developed by Sharif et al. (2016) [5], is the Eyeglass Accessory Printing. It consists of wearing 3D printed paper glasses allowing a targeted attack (see example below where [...] is impersonating [...] with the glasses).
+ 
+### Digital attacks 
+A first type of digital attack is to proceed to an **image processing-based distortion**. By using deep CNN-based architecture, it is possible to modify the images to occlude some of the facial features or to add a visible noise in the image. We can mention for example grid based occlusions, eye region occlusions, forehead occlusions, most significant bit-based noise distortion…
+
+Image processing-based distortions are however harming the quality of the input image. In some cases, the attacker may need to preserve the facial appearance of the person. Those types of attacks are called **Image De-identification**. They process an adversarial perturbation preserving the global facial quality but causing an authentication error.
+
+**Geometric attacks** also aim to apply image modifications that are hardly visible to the human eye, by using spatial transformations of some facial elements (the shape of the face, the eyes, the nose...). Those transformations can be slight rotations, translations or scale variations for example.
+
+
+### Defense strategies
+We can find 3 categories of defense strategies against digital attacks :
+- **Alteration of the input data** : a perturbation of the images, so that the model remains robust against perturbations from adversarial attacks
+- **Change of the model** : an addition of an adversarial attack detection algorithm coupled with techniques to modify the architecture (e.g. dropout) in case of an attack
+- **Addition of external models** to consolidate the existing model
 
 ## Fawkes & Data Poisoning
 
@@ -44,6 +72,8 @@ More precisely, Fawkes follows the next steps :
 4. The user can now post the new photos online, and has to ensure that no clear photos are available elsewhere on the web
 5. Facial recognition models will then learn from this modified photos that are mathematically different even when looking similar and won’t be able to recognize
 
+<p align="center"> <img src="https://github.com/ArianeDlns/adv-AI-project/blob/main/img/Fawkes_references.png" width="700" alt="Fawkes working"/> 
+
 This method is called “data poisoning” as it doesn’t affect the model itself but hampers its learning phase by providing altered training input. But this will only work if the model has not already been trained with clean pictures and if no or very few uncloaked photos are available online.
 
 <p align="center"> <img src="https://github.com/ArianeDlns/adv-AI-project/blob/main/img/Fawkes.png" width="700" alt="Fawkes"/> 
@@ -55,16 +85,16 @@ This method is called “data poisoning” as it doesn’t affect the model itse
 ## Attacks limits
 
 
-
-
 ## References 
 
-[1] : [Amodei el al, 2016] Amodei, D., Olah, C., Steinhardt, J., Christiano, P.F., Schulman, J., & Mané, D. (2016). Concrete Problems in AI Safety. ArXiv, abs/1606.06565.
+[1] [Amodei et al, 2016] Amodei, D., Olah, C., Steinhardt, J., Christiano, P.F., Schulman, J., & Mané, D. (2016). Concrete Problems in AI Safety. ArXiv, abs/1606.06565.
 
 [2] Fawkes: Protecting Personal Privacy against Unauthorized Deep Learning Models.
 Shawn Shan, Emily Wenger, Jiayun Zhang, Huiying Li, Haitao Zheng, and Ben Y. Zhao.
 In Proceedings of USENIX Security Symposium 2020. 
 
-[3] : Rubel Biswas, Pablo Blanco-Medina (Aug. 2021). State of the Art : Face Recognition. ArXiv abs/2108.11821.
+[3] Rubel Biswas, Pablo Blanco-Medina (Aug. 2021). State of the Art : Face Recognition. ArXiv abs/2108.11821.
 
-[4] : Evani Radiya-Dixi, Florian Tramèr (2021). Data Poisoning Won’t Save You From Facial Recognition. ArXiv:2106.14851.
+[4] Evani Radiya-Dixi, Florian Tramèr (2021). Data Poisoning Won’t Save You From Facial Recognition. ArXiv:2106.14851.
+
+[5] [Sharif et al, 2016] Sharif, Mahmood & Bhagavatula, Sruti & Bauer, Lujo & Reiter, Michael. (2016). Accessorize to a Crime: Real and Stealthy Attacks on State-of-the-Art Face Recognition. 1528-1540. 10.1145/2976749.2978392. 
