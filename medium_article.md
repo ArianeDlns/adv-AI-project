@@ -58,8 +58,8 @@ Image processing-based distortions are however harming the quality of the input 
 
 **Geometric attacks** also aim to apply image modifications that are hardly visible to the human eye, by using spatial transformations of some facial elements (the shape of the face, the eyes, the nose...). Those transformations can be slight rotations, translations or scale variations for example.
 
-<p align="center"> <img src="https://github.com/ArianeDlns/adv-AI-project/blob/main/img/digital_attack_types.png" width="500>
-<p align = "center">Types of digital attacks </p>
+<p align="center"> <img src="https://github.com/ArianeDlns/adv-AI-project/blob/main/img/digital_attack_types.png" width="500" alt="Types of digital attacks">
+ 
 
 ### Defense strategies
 We can find 3 categories of defense strategies against digital attacks :
