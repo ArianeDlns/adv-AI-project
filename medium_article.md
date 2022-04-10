@@ -84,8 +84,15 @@ This method is called “data poisoning” as it doesn’t affect the model itse
 
 <p align="center"> <img src="https://github.com/ArianeDlns/adv-AI-project/blob/main/img/Fawkes.png" width="700" alt="Fawkes"/> 
 
+
 ## Tests and results
 
+In order to test the Fawkes data poisoning solution, we used the facial recognition model proposed by Adam Geitgey. This model consists of 4 steps: a face search based on the Histogram of Oriented Gradients method, an estimation of the positions of the facial landmarks, an encoding of the image and then a classification by SVM of this encoding.
+
+The method is as follows: from a dataset of celebrity images, we select a class that will be used as a study subject. The facial recognition model will be trained on a non-poisoned dataset, then on a dataset where the selected class will have been poisoned. Next, we will test these two facial recognition models on other non-poisoned images of the selected class, and compare the probabilities of the possible outcomes for the SVM test samples. The dataset used is an open-source dataset made of 6 classes corresponding to 6 celebrities: Ben Afflek, Elton John, Jerry Seinfield, Madonna, Mindy Kaling and Barack Obama.
+
+The code for training the model can be found below:
+ 
 ```python
 import face_recognition
 from sklearn import svm
@@ -131,6 +138,15 @@ for person in train_cloaked_dir:
 clf_cloaked = svm.SVC(gamma='scale', probability=True)
 clf_cloaked.fit(encodings,names)
 ```
+Once these two models were trained, they were tested on the "Obama" class. Finally, the probabilities of the possible outcomes for the test samples were calculated by cross-validation. The results are as follows:
+
+<p align="center"> <img src="https://github.com/ArianeDlns/adv-AI-project/blob/main/img/results_uncloaked.png" width="400" alt="Results of trained model on uncloaked images">
+<p align = "center">Results 1 - Test results of trained model on uncloaked images </p>
+
+<p align="center"> <img src="https://github.com/ArianeDlns/adv-AI-project/blob/main/img/results_cloaked.png" width="400" alt="Results of trained model on cloaked images">
+<p align = "center">Results 2 - Test results of trained model on cloaked images </p>
+
+As can be observed, the results decreased well in the facial recognition task on the Obama images after cloaking the images. However, cloaking does not allow the model to be fooled here. This is indeed one of the limitations of our test here, as Shan et al indicate in their paper [2], Fawkes' data-poisoning is effective on a face recognition model when it is trained on a minimum of 65 classes. This is one of the limitations of data-poisoning, discussed in the next section
 
 ## Attacks limits
 
@@ -153,3 +169,5 @@ Finally, poisoning technics do not work well with 'toy examples' as they relies 
 [4] [Tramer et al, 2021] Evani Radiya-Dixi, Florian Tramèr (2021). Data Poisoning Won’t Save You From Facial Recognition. ArXiv:2106.14851.
 
 [5] [Sharif et al, 2016] Sharif, Mahmood & Bhagavatula, Sruti & Bauer, Lujo & Reiter, Michael. (2016). Accessorize to a Crime: Real and Stealthy Attacks on State-of-the-Art Face Recognition. 1528-1540. 10.1145/2976749.2978392. 
+
+[6] [Adam Geitgey, 2016] Adam Geitgey (2016). Face Recognition. https://face-recognition.readthedocs.io/en/latest/readme.html
