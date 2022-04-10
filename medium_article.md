@@ -146,7 +146,7 @@ Once these two models were trained, they were tested on the "Obama" class. Final
 <p align="center"> <img src="https://github.com/ArianeDlns/adv-AI-project/blob/main/img/results_cloaked.png" width="400" alt="Results of trained model on cloaked images">
 <p align = "center">Results 2 - Test results of trained model on cloaked images </p>
 
-As can be observed, the results decreased well in the facial recognition task on the Obama images after cloaking the images. However, cloaking does not allow the model to be fooled here. This is indeed one of the limitations of our test here, as Shan et al indicate in their paper [2], Fawkes' data-poisoning is effective on a face recognition model when it is trained on a minimum of 65 classes. This is one of the limitations of data-poisoning, discussed in the next section
+As can be observed, the results decreased well in the facial recognition task on the Obama images after cloaking the images. However, cloaking does not allow the model to be fooled here. This is indeed one of the limitations of our test here, as Shan et al. indicate in their paper [2], Fawkes' data-poisoning is effective on a face recognition model like this one when it is trained on a minimum of 65 classes. This is one of the limitations of data-poisoning, discussed in the next section
 
 ## Attacks limits
 
