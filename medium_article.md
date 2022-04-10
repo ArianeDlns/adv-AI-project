@@ -89,7 +89,7 @@ This method is called “data poisoning” as it doesn’t affect the model itse
 
 In order to test the Fawkes data poisoning solution, we used the facial recognition model proposed by Adam Geitgey [6]. This model consists of 4 steps: a face search based on the Histogram of Oriented Gradients method, an estimation of the positions of the facial landmarks, an encoding of the image and then a classification by SVM of this encoding.
 
-The method is as follows: from a dataset of celebrity images, we select a class that will be used as a study subject. The facial recognition model will be trained on a non-poisoned dataset, then on a dataset where the selected class will have been poisoned. Next, we will test these two facial recognition models on other non-poisoned images of the selected class, and compare the probabilities of the possible outcomes for the SVM test samples. The dataset used is an open-source dataset made of 6 classes corresponding to 6 celebrities: Ben Afflek, Elton John, Jerry Seinfield, Madonna, Mindy Kaling and Barack Obama.
+Our test solution is as follows: from a dataset of celebrity images, we select a class that will be used as a study subject. The facial recognition model will be trained on a non-poisoned dataset, then on a dataset where the selected class will have been poisoned. Next, we will test these two facial recognition models on other non-poisoned images of the selected class, and compare the probabilities of the possible outcomes for the SVM test samples. The dataset used is an open-source dataset made of 6 classes corresponding to 6 celebrities: Ben Afflek, Elton John, Jerry Seinfield, Madonna, Mindy Kaling and Barack Obama.
 
 The code for training the model can be found below:
  
