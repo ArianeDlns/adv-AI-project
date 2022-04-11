@@ -49,7 +49,7 @@ The different attacks can be separated into 2 types:
 ### Physical attacks
 The majority of physical attacks are **presentation attacks** or **spoofing**. They include many techniques like wearing an accessory or imitating another person, with the aim of pretending to be another person (for example with a printed photo, a video, fake fingerprints, a 3D printed mask...). These attacks can be countered by Liveness Detection techniques that determine if the face is "alive" or real, for example by blink detection or interactive face detection.
  
-Another physical attack, developed by Sharif et al. (2016) [5], is the Eyeglass Accessory Printing. It consists of wearing 3D printed paper glasses allowing a targeted attack (see example below where [...] is impersonating [...] with the glasses).
+Another physical attack, developed by Sharif et al. (2016) [5], is the Eyeglass Accessory Printing. It consists of wearing 3D printed paper glasses allowing a targeted attack.
  
 ### Digital attacks 
 A first type of digital attack is to proceed to an **image processing-based distortion**. By using deep CNN-based architecture, it is possible to modify the images to occlude some of the facial features or to add a visible noise in the image. We can mention for example grid based occlusions, eye region occlusions, forehead occlusions, most significant bit-based noise distortion…
